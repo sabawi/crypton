@@ -172,7 +172,7 @@ int decrypt(unsigned char *ciphertext, int ciphertext_len, unsigned char *key,
     return plaintext_len;
 }
 
-char *read_textfile(char *file_name, long *size) {
+char *read_targetfile(char *file_name, long *size) {
     char *source = NULL;
     FILE *fp = fopen(file_name, "r");
     if (fp != NULL) {
