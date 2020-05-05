@@ -304,17 +304,21 @@ int main(int argc, char* argv[]) {
 	    long textsize = 0;
 
 	    /* Message to be encrypted */
-	    unsigned char *plaintext = (unsigned char *) read_textfile((char *) file_name.c_str(), &textsize);
+	    unsigned char *plaintext = (unsigned char *) read_targetfile((char *) file_name.c_str(), &textsize);
             if (plaintext == NULL) {
 	        cout << "File " << file_name << " Not found!" << endl;
 	        exit(-1);
 	    }
+            else{
+                cout << "File size = " << textsize << endl;
+            }
 
 	    /* Buffer for ciphertext. Ensure the buffer is long enough for the
 	    * ciphertext which may be longer than the plaintext, dependant on the
 	    * algorithm and mode
 	    */
-	    unsigned char ciphertext[textsize];
+	    // unsigned char ciphertext[textsize];
+            unsigned char* ciphertext = (unsigned char *) malloc(sizeof (unsigned char) * (textsize + 1));
 	    try 
 	    {
 		/* Do something useful with the ciphertext here */
@@ -336,6 +340,7 @@ int main(int argc, char* argv[]) {
 		std::cerr << "Error occurred: " << e.what() << std::endl;
 	    }
 
+            free(ciphertext);
 	    free(plaintext);
 	}
 	else if (strcmp(argv[1], "-dec") == 0) 
