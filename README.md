@@ -1,5 +1,4 @@
-    @page { size: 8.5in 11in; margin: 0.79in } p { line-height: 115%; margin-bottom: 0.1in; background: transparent } pre { background: transparent } pre.western { font-family: "Liberation Mono", monospace; font-size: 10pt } pre.cjk { font-family: "Noto Sans Mono CJK SC", monospace; font-size: 10pt } pre.ctl { font-family: "Liberation Mono", monospace; font-size: 10pt } a:link { color: #000080; text-decoration: underline } a:visited { color: #800000; text-decoration: underline }
-
+<code>
 **Strong 256 CBC Encryption tool for Linux systems**
 
   
@@ -48,3 +47,4 @@ The decrypted file will be called **<filename>.decrypted**.  In the above exampl
 Enjoy!
 
 Al
+</code>
